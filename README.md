@@ -1,5 +1,10 @@
-# stockwatcher
-A retro style finance stock and profile controller.
+# Stock Watcher
+
+A retro style finance stock watcher and portfolio controller.
+
+Work in progress.
+
+Powered by google finance and yahoo finance.
 
 ```
 config = {

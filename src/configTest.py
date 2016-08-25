@@ -1,0 +1,32 @@
+config = {
+  "what2watch": {"MIRG": {"g":"MIRG:BCBA", "y": "MIRG.BA"},
+                 "PSUR": {"g":"PSUR:BCBA", "y": "PSUR.BA"},
+                 "LONG": {"g":"LONG:BCBA", "y": "LONG.BA"},
+                 "CARC": {"g":"CARC:BCBA", "y": "CARC.BA"},
+                 "CRES": {"g":"CRES:BCBA", "y": "CRES.BA"},
+                 "GCLA": {"g":"GCLA:BCBA", "y": "GCLA.BA"},
+                 "IRSA": {"g":"IRSA:BCBA", "y": "IRSA.BA"},
+                 "METR": {"g":"METR:BCBA", "y": "METR.BA"},
+                 "MOLI": {"g":"MOLI:BCBA", "y": "MOLI.BA"},
+                 "AGRO": {"g":"AGRO:BCBA", "y": "AGRO.BA"},
+                 "ALUA": {"g":"ALUA:BCBA", "y": "ALUA.BA"},
+                 "BMA": {"g":"BMA:BCBA", "y": "BMA.BA"},
+                 "EDN": {"g":"EDN:BCBA", "y": "EDN.BA"},
+                 "FRAN": {"g":"FRAN:BCBA", "y": "FRAN.BA"},
+                 "IRSA": {"g":"IRSA:BCBA", "y": "IRSA.BA"},
+                 "PAMP": {"g":"PAMP:BCBA", "y": "PAMP.BA"},
+                 "PETR": {"g":"PETR:BCBA", "y": "PETR.BA"},
+                 "CTIO": {"g":"CTIO:BCBA", "y": "CTIO.BA"},
+                 "DICA": {"g":"DICA:BCBA", "y": "DICA.BA"},
+                 "GCAL": {"g":"GCAL:BCBA", "y": "GCAL.BA"},
+                 "CELU": {"g":"CELU:BCBA", "y": "CELU.BA"},
+                 "APBR": {"g":"APBR:BCBA", "y": "APBR.BA"},
+                 "SAMI": {"g":"SAMI:BCBA", "y": "SAMI.BA"},
+                 "CAPU": {"g":"CAPU:BCBA", "y": "CAPU.BA"},
+                 "ERAR": {"g":"ERAR:BCBA", "y": "ERAR.BA"},
+                 "PATY": {"g":"PATY:BCBA", "y": "PATY.BA"}
+                },
+  "sleep": 5,
+  "alert": 5.0
+}
+
