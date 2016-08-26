@@ -79,6 +79,7 @@ def getTableQuotes():
            urwid.Text("DIF"),
            urwid.Text("PRICE"),
            urwid.Text("TIME"),
+           urwid.Text("ACTION"),
            urwid.Text("ALERT")]
 
   tableQuotes.append((urwid.GridFlow(title, 10, 1, 0, "left"), ("pack", None)))
@@ -96,11 +97,24 @@ def getTableQuotes():
     elif dif<0:
       attr= "baja"
 
+    action=""
+    attrAction = "default"
+    if "buyAt" in config["what2watch"][s]:
+      if price <= config["what2watch"][s]["buyAt"]:
+        action="BUY"
+        attrAction="alta"
+
+    if "sellAt" in config["what2watch"][s]:
+      if price >= config["what2watch"][s]["sellAt"]:
+        action="SELL"
+        attrAction="baja"
+
     #http://urwid.org/reference/widget.html#urwid.GridFlow
     cells = [urwid.Text(s),
              urwid.Text((attr, "{:>+3.2%}".format(q["dif"]))),
              urwid.Text("{:>8.2f}".format(price)),
              urwid.Text("{}".format(fec)),
+             urwid.Text((attrAction,action)),
              urwid.Text(("alert", "ALERT!" if q["dif"] > config["alert"] else ""))
              ]
 
@@ -125,14 +139,6 @@ def getQuotesWatched(loop, userData=None):
       qSt = quotesStorage[stock_symbol_]
       qSt["data"] = q
       qSt["dif"] = float(q["ChangePercent"])/ 100
-
-      # qSt["list"].append(float(q["LastTradePrice"].replace(",", "")))
-      # if len(qSt["list"]) >= 2:
-      #   first = qSt["list"][0]
-      #   last = qSt["list"][-1]
-      #
-      #   ser = pandas.Series([first, last])
-      #   qSt["dif"]=ser.pct_change()[1]
 
     #http://urwid.org/manual/widgets.html#container-widgets
     grid.contents = getTableQuotes()
